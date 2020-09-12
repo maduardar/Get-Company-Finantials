@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+<title>Search Page</title>
+{% endblock %}
+
+{% block body %}
+<div>
+  <div style="background-color:#66998c;">
+    <h1 style="text-align: center; color:#000000;">Company Financials</h1>
+  </div>
+
+
+    <div style="text-align: center;">
+        <form action="/" method="POST">
+            <input type="text" name="content" id="content">
+            <input type="submit" value="Search ticker">
+        </form>
+    </div>
+</div>
+<div style="padding:30px;">
+	<table>
+  <tr>
+    <th>Top Indian Companies</th>
+    <th>Global Companies</th>
+  </tr>
+  <tr>
+    <td>TCS</td>
+    <td>AMZN</td>
+  </tr>
+  <tr>
+    <td>TTM</td>
+    <td>WMT</td>
+  </tr>
+  <tr>
+    <td>HBD</td>
+    <td>MSFT</td>
+  </tr>
+  <tr>
+    <td>INFY</td>
+    <td>FB</td>
+  </tr>
+  <tr>
+    <td>ONGC.NS</td>
+    <td>GOOG</td>
+  </tr>
+</table>
+</div>
+{% endblock %}

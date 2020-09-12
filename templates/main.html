@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <title>Financials</title>
+        <style>
+            table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 60%;
+      margin: auto;
+    }
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 5px;
+    }
+        </style>
+    </head>
+    <h1 style="text-align: center; background-color:#66998c;">Company Financials: {{company}}</h1>
+    <body style="background-color:#c2c2a3;">
+          {% for table in tables %}
+          {{ table|safe }}
+          {% endfor %}
+    </body>
+</html>
