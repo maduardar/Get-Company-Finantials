@@ -9,7 +9,7 @@ gunicorn==20.0.4
 idna==2.10
 itsdangerous==1.1.0
 Jinja2==3.0.0
-MarkupSafe==1.1.1
+MarkupSafe>=2.0.0
 numpy
 pandas
 pretty-html-table==0.9.dev0
