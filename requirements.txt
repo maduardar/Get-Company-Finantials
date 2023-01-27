@@ -10,8 +10,8 @@ idna==2.10
 itsdangerous==1.1.0
 Jinja2==2.11.2
 MarkupSafe==1.1.1
-numpy==1.19.2
-pandas==1.1.2
+numpy
+pandas
 pretty-html-table==0.9.dev0
 pymongo==3.11.0
 python-dateutil==2.8.1
