@@ -1,13 +1,20 @@
 import pandas as pd
 from bs4 import BeautifulSoup
 from urllib.request import urlopen, Request
+import requests
 
+agent = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 11_5) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 ' \
+        'Safari/605.1.15 '
+headers = {'User-Agent': agent}
 
 def search_company(search_string):
-    url = 'https://finance.yahoo.com/quote/' + search_string + '/financials?p=' + search_string
+    url = 'https://finance.yahoo.com/quote/' + search_string + '/financials?p=' + search_string + '&guccounter=1'
+
+    print(url)
     client = Request(url)
-    response = urlopen(client).read()
-    html = BeautifulSoup(response, "html.parser")
+    # response = urlopen(client, headers=headers).read()
+    response = requests.get(url, headers=headers)
+    html = BeautifulSoup(response.text, "html.parser")
     return html
 
 
