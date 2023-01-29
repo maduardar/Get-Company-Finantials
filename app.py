@@ -11,6 +11,7 @@ app = Flask(__name__)
 @cross_origin()
 def index():
     if request.method == 'POST':
+        print(request.form)
         search_string = request.form['content'].replace(" ", "")
         content = company_financials(search_string)
         table = build_table(content, 'blue_light', font_size='small', font_family='Lucida Grande', text_align='right')
